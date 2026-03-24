@@ -1,15 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cedar Crest Homes</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('background.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.65);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 48px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    padding: 12px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    background: #c8a97e;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #a88c65;
+}
+
+.contact {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+</style>
 </head>
 
-<body style="background-color:black; color:white; text-align:center; font-family:Arial;">
+<body>
 
-<h1>CEDAR CREST</h1>
-<h2>Luxury Homes Coming Soon</h2>
+<div class="overlay">
 
-<p>Register your interest</p>
+    <!-- LOGO -->
+    <img src="logo.png" class="logo">
+
+    <h1>CEDAR CREST</h1>
+    <h2>Luxury Homes Coming Soon in Mission, BC</h2>
+
+    <!-- EMAIL FORM -->
+    <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Register Interest</button>
+    </form>
+
+    <div class="contact">
+        📞 604-614-7771 <br>
+        📧 info@pdcl.ca
+    </div>
+
+</div>
 
 </body>
 </html>
