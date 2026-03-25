@@ -11,7 +11,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* HERO (TOP IMAGE SECTION) */
+/* HERO SECTION */
 .hero {
     position: relative;
     height: 65vh;
@@ -38,7 +38,7 @@ body {
     opacity: 1;
 }
 
-/* DARK OVERLAY */
+/* OVERLAY */
 .hero::after {
     content: "";
     position: absolute;
@@ -47,7 +47,7 @@ body {
     background: rgba(0,0,0,0.45);
 }
 
-/* HERO CONTENT */
+/* CONTENT */
 .hero-content {
     position: relative;
     z-index: 2;
@@ -59,6 +59,7 @@ body {
     color: white;
     text-align: center;
     padding: 20px;
+    transform: translateY(40px); /* FIXED alignment */
 }
 
 /* LOGO */
@@ -71,7 +72,7 @@ body {
 h1 {
     font-size: 48px;
     letter-spacing: 3px;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 h2 {
@@ -102,7 +103,7 @@ button:hover {
     background: #a88c65;
 }
 
-/* BELOW SECTIONS */
+/* SECTIONS BELOW */
 .section {
     padding: 80px 20px;
     text-align: center;
@@ -127,7 +128,7 @@ button:hover {
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <div class="hero">
 
     <div class="slider">
@@ -150,13 +151,13 @@ button:hover {
 
 </div>
 
-<!-- SECTION 1 -->
+<!-- ABOUT -->
 <div class="section">
     <h2>About Cedar Crest</h2>
     <p>Modern townhomes in Mission, BC with rooftop decks and premium finishes.</p>
 </div>
 
-<!-- SECTION 2 -->
+<!-- FEATURES -->
 <div class="section light">
     <h2>Project Highlights</h2>
     <p>
@@ -166,7 +167,7 @@ button:hover {
     </p>
 </div>
 
-<!-- SECTION 3 -->
+<!-- CONTACT -->
 <div class="section">
     <h2>Contact</h2>
     <p>
