@@ -21,14 +21,13 @@ body {
     background: #d8cfb8;
 }
 
-/* Slides container */
+/* Slides */
 .slides {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-/* Each slide */
 .slide {
     position: absolute;
     width: 100%;
@@ -37,14 +36,13 @@ body {
     animation: fade 15s infinite;
 }
 
-/* Show one image fully */
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* FULL image visible */
+    object-fit: contain;
 }
 
-/* Animation timing */
+/* Animation */
 .slide:nth-child(1) { animation-delay: 0s; }
 .slide:nth-child(2) { animation-delay: 5s; }
 .slide:nth-child(3) { animation-delay: 10s; }
@@ -57,33 +55,32 @@ body {
     100% { opacity: 0; }
 }
 
-/* ===== CONTENT BELOW ===== */
+/* ===== CONTENT ===== */
 .content {
     text-align: center;
-    padding: 70px 20px 90px;
+    padding: 30px 20px 60px; /* 🔥 reduced top padding */
 }
 
-/* Bigger logo */
+/* LOGO */
 .logo {
-    width: 400px;
-    margin-bottom: 25px;
+    width: 180px;
+    margin-bottom: 10px; /* 🔥 reduced space below logo */
 }
 
-/* Heading */
+/* TEXT */
 h1 {
     font-size: 42px;
     letter-spacing: 4px;
-    margin-bottom: 10px;
+    margin: 5px 0; /* 🔥 tighter spacing */
 }
 
-/* Subheading */
 h2 {
     font-weight: 300;
     color: #555;
-    margin-bottom: 30px;
+    margin: 5px 0 20px; /* 🔥 tighter spacing */
 }
 
-/* Form */
+/* FORM */
 input {
     padding: 12px;
     width: 260px;
@@ -105,9 +102,9 @@ button:hover {
     background: #b8935c;
 }
 
-/* Contact */
+/* CONTACT */
 .contact {
-    margin-top: 20px;
+    margin-top: 15px; /* 🔥 reduced */
     color: #444;
 }
 </style>
@@ -115,7 +112,7 @@ button:hover {
 
 <body>
 
-<!-- ===== IMAGE CAROUSEL ===== -->
+<!-- ===== CAROUSEL ===== -->
 <div class="carousel">
     <div class="slides">
 
@@ -134,7 +131,7 @@ button:hover {
     </div>
 </div>
 
-<!-- ===== CONTENT SECTION ===== -->
+<!-- ===== CONTENT ===== -->
 <div class="content">
 
     <img src="logo.png" class="logo">
