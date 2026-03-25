@@ -11,10 +11,10 @@ body {
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* HERO SECTION */
+/* HERO (TOP IMAGE SECTION) */
 .hero {
     position: relative;
-    height: 70vh;
+    height: 65vh;
     overflow: hidden;
 }
 
@@ -44,10 +44,10 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.45);
 }
 
-/* CONTENT */
+/* HERO CONTENT */
 .hero-content {
     position: relative;
     z-index: 2;
@@ -63,27 +63,27 @@ body {
 
 /* LOGO */
 .logo {
-    width: 320px;
-    margin-bottom: 20px;
+    width: 260px;
+    margin-bottom: 15px;
 }
 
 /* TEXT */
 h1 {
-    font-size: 52px;
-    letter-spacing: 4px;
+    font-size: 48px;
+    letter-spacing: 3px;
     margin-bottom: 10px;
 }
 
 h2 {
     font-weight: 300;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     color: #ddd;
 }
 
 /* FORM */
 input {
     padding: 12px;
-    width: 260px;
+    width: 240px;
     border-radius: 5px;
     border: none;
     margin-right: 10px;
@@ -102,43 +102,77 @@ button:hover {
     background: #a88c65;
 }
 
-.contact {
-    margin-top: 25px;
-    font-size: 14px;
+/* BELOW SECTIONS */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    background: white;
+}
+
+.section.light {
+    background: #f5f5f5;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.section p {
+    font-size: 18px;
+    color: #555;
 }
 </style>
 </head>
 
 <body>
 
+<!-- HERO SECTION -->
 <div class="hero">
 
-    <!-- IMAGE SLIDER -->
     <div class="slider">
         <img src="img1.jpg" class="slide active">
         <img src="img2.jpg" class="slide">
         <img src="img3.jpg" class="slide">
     </div>
 
-    <!-- CONTENT -->
     <div class="hero-content">
         <img src="logo.png" class="logo">
 
         <h1>CEDAR CREST</h1>
         <h2>Luxury Homes Coming Soon in Mission, BC</h2>
 
-        <!-- FORM -->
-        <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
-            <input type="email" name="email" placeholder="Enter your email" required>
-            <button type="submit">Register Interest</button>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button>Register Interest</button>
         </form>
-
-        <div class="contact">
-            📞 604-614-7771 <br>
-            📧 info@pdcl.ca
-        </div>
     </div>
 
+</div>
+
+<!-- SECTION 1 -->
+<div class="section">
+    <h2>About Cedar Crest</h2>
+    <p>Modern townhomes in Mission, BC with rooftop decks and premium finishes.</p>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section light">
+    <h2>Project Highlights</h2>
+    <p>
+        Rooftop patios<br>
+        Modern architecture<br>
+        Prime Mission location
+    </p>
+</div>
+
+<!-- SECTION 3 -->
+<div class="section">
+    <h2>Contact</h2>
+    <p>
+        📞 604-614-7771<br>
+        📧 info@pdcl.ca
+    </p>
 </div>
 
 <!-- SLIDER SCRIPT -->
