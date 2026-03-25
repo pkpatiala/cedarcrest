@@ -9,50 +9,64 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-color: #e9e2d0;
+    background: #d8cfb8;
 }
 
-/* ===== IMAGE CAROUSEL ===== */
+/* ===== CAROUSEL ===== */
 .carousel {
     width: 100%;
     height: 420px;
-    background: black;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    animation: slide 15s infinite;
 }
 
 .slide {
-    position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    flex-shrink: 0;
 }
 
-.slide.active {
-    opacity: 1;
-}
-
+/* 🔥 KEY FIX HERE */
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* FULL IMAGE NO CUT */
+    object-fit: cover;   /* fills full width */
 }
 
-/* ===== CONTENT BELOW ===== */
+/* Animation */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    30% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    63% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    96% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* ===== CONTENT SECTION ===== */
 .content {
     text-align: center;
-    padding: 70px 20px;
+    padding: 60px 20px 80px;
 }
 
-/* BIG LOGO */
+/* Bigger logo */
 .logo {
-    width: 260px;
-    margin-bottom: 25px;
+    width: 130px;
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 44px;
+    font-size: 42px;
+    letter-spacing: 4px;
     margin-bottom: 10px;
 }
 
@@ -62,59 +76,56 @@ h2 {
     margin-bottom: 30px;
 }
 
-/* FORM */
-.form-box {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+form {
+    margin-bottom: 20px;
 }
 
 input {
     padding: 12px;
     width: 260px;
+    border: none;
     border-radius: 5px;
-    border: 1px solid #ccc;
 }
 
 button {
-    padding: 12px 18px;
-    background: #c8a46b;
+    padding: 12px 20px;
     border: none;
+    background: #caa46b;
     color: white;
     border-radius: 5px;
+    margin-left: 10px;
     cursor: pointer;
 }
 
+button:hover {
+    background: #b8935c;
+}
+
 .contact {
-    margin-top: 25px;
+    margin-top: 20px;
     color: #444;
-    font-size: 14px;
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- ===== CAROUSEL ===== -->
+<!-- ===== IMAGE CAROUSEL ===== -->
 <div class="carousel">
-
-    <div class="slide active">
-        <img src="img1.jpg">
+    <div class="slides">
+        <div class="slide">
+            <img src="img1.jpg">
+        </div>
+        <div class="slide">
+            <img src="img2.jpg">
+        </div>
+        <div class="slide">
+            <img src="img3.jpg">
+        </div>
     </div>
-
-    <div class="slide">
-        <img src="img2.jpg">
-    </div>
-
-    <div class="slide">
-        <img src="img3.jpg">
-    </div>
-
 </div>
 
-<!-- ===== CONTENT ===== -->
+<!-- ===== CONTENT BELOW ===== -->
 <div class="content">
 
     <img src="logo.png" class="logo">
@@ -122,10 +133,10 @@ button {
     <h1>CEDAR CREST</h1>
     <h2>Luxury Homes Coming Soon in Mission, BC</h2>
 
-    <div class="form-box">
+    <form>
         <input type="email" placeholder="Enter your email">
         <button>Register Interest</button>
-    </div>
+    </form>
 
     <div class="contact">
         📞 604-614-7771<br>
@@ -133,18 +144,6 @@ button {
     </div>
 
 </div>
-
-<!-- ===== SCRIPT ===== -->
-<script>
-let slides = document.querySelectorAll('.slide');
-let index = 0;
-
-setInterval(() => {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-}, 4000);
-</script>
 
 </body>
 </html>
