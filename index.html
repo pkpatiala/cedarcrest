@@ -11,14 +11,13 @@ body {
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* HERO SECTION */
+/* TOP IMAGE CAROUSEL */
 .hero {
     position: relative;
-    height: 65vh;
+    height: 50vh;
     overflow: hidden;
 }
 
-/* SLIDER */
 .slider {
     position: absolute;
     width: 100%;
@@ -38,56 +37,47 @@ body {
     opacity: 1;
 }
 
-/* OVERLAY */
-.hero::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.45);
-}
-
-/* CONTENT */
-.hero-content {
-    position: relative;
-    z-index: 2;
-    height: 100%;
+/* MAIN SECTION BELOW */
+.main {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    color: white;
+    justify-content: center;
+    padding: 60px 40px;
+    gap: 60px;
+}
+
+/* LEFT LOGO */
+.logo-box {
+    flex: 1;
     text-align: center;
-    padding: 20px;
-    transform: translateY(40px); /* FIXED alignment */
 }
 
-/* LOGO */
 .logo {
-    width: 260px;
-    margin-bottom: 15px;
+    width: 300px;
 }
 
-/* TEXT */
-h1 {
-    font-size: 48px;
-    letter-spacing: 3px;
-    margin: 10px 0;
+/* RIGHT CONTENT */
+.content-box {
+    flex: 1;
 }
 
-h2 {
-    font-weight: 300;
+.content-box h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.content-box p {
+    font-size: 18px;
+    color: #555;
     margin-bottom: 20px;
-    color: #ddd;
 }
 
 /* FORM */
 input {
     padding: 12px;
-    width: 240px;
+    width: 250px;
     border-radius: 5px;
-    border: none;
-    margin-right: 10px;
+    border: 1px solid #ccc;
 }
 
 button {
@@ -96,6 +86,7 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
+    margin-left: 10px;
     cursor: pointer;
 }
 
@@ -103,77 +94,56 @@ button:hover {
     background: #a88c65;
 }
 
-/* SECTIONS BELOW */
-.section {
-    padding: 80px 20px;
-    text-align: center;
-    background: white;
-}
+/* MOBILE */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.section.light {
-    background: #f5f5f5;
-}
-
-.section h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.section p {
-    font-size: 18px;
-    color: #555;
+    button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<!-- IMAGE CAROUSEL -->
 <div class="hero">
-
     <div class="slider">
         <img src="img1.jpg" class="slide active">
         <img src="img2.jpg" class="slide">
         <img src="img3.jpg" class="slide">
     </div>
+</div>
 
-    <div class="hero-content">
+<!-- MAIN SECTION -->
+<div class="main">
+
+    <!-- LEFT LOGO -->
+    <div class="logo-box">
         <img src="logo.png" class="logo">
+    </div>
 
+    <!-- RIGHT TEXT -->
+    <div class="content-box">
         <h1>CEDAR CREST</h1>
-        <h2>Luxury Homes Coming Soon in Mission, BC</h2>
+        <p>Luxury Homes Coming Soon in Mission, BC</p>
 
         <form>
             <input type="email" placeholder="Enter your email" required>
             <button>Register Interest</button>
         </form>
+
+        <p style="margin-top:20px;">
+            📞 604-614-7771 <br>
+            📧 info@pdcl.ca
+        </p>
     </div>
 
-</div>
-
-<!-- ABOUT -->
-<div class="section">
-    <h2>About Cedar Crest</h2>
-    <p>Modern townhomes in Mission, BC with rooftop decks and premium finishes.</p>
-</div>
-
-<!-- FEATURES -->
-<div class="section light">
-    <h2>Project Highlights</h2>
-    <p>
-        Rooftop patios<br>
-        Modern architecture<br>
-        Prime Mission location
-    </p>
-</div>
-
-<!-- CONTACT -->
-<div class="section">
-    <h2>Contact</h2>
-    <p>
-        📞 604-614-7771<br>
-        📧 info@pdcl.ca
-    </p>
 </div>
 
 <!-- SLIDER SCRIPT -->
